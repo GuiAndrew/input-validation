@@ -27,7 +27,8 @@ class App extends Component {
 
   render() {
     const listChar = this.state.inputText.split('').map((character, index) => {
-      return <Char character={ character } key={ index } clicked={() => this.deleteTheCharClickedHandler(index) } />
+      return <Char character={ character } validationInfo={ this.state.inputText.length }
+              key={ index } clicked={ () => this.deleteTheCharClickedHandler(index) } />
     });
 
     return (
